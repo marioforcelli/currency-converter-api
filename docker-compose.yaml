@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  currency-api:
+    build: .
+    container_name: fastapi-currency-api
+    env_file: .env
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/code/app
